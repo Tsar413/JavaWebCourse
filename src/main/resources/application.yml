@@ -1,5 +1,9 @@
 server:
   port: 8094
+  servlet:
+    jsp:
+      init-parameters:
+        development: true # 开启JSP开发模式
 
 spring:
   mvc:
@@ -15,3 +19,9 @@ spring:
     hibernate:
       ddl-auto: update
       show-sql: true
+
+# 日志
+logging:
+  level:
+    root: info
+    com.study.jsp: debug # 指定包日志

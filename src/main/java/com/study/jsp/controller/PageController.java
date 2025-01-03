@@ -6,7 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PageController {
     @RequestMapping("/index")
-    public String getPage(){
+    public String getIndexPage(){
         return "index";
+    }
+
+    @RequestMapping("/course1")
+    public String getCoursePage1(){
+        return "course1";
     }
 }
