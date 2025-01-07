@@ -1,0 +1,104 @@
+/*******************************************************************************************************************
+*  Author: Tomas Lach (www.tomaslach.cz)                                                                           *
+*  Date: 14.03.2011                                                                                                *
+*******************************************************************************************************************/
+html {}
+body {color: #404040;font: normal 12px Arial,sans-serif;padding-top: 73px}
+p {font-size: 1.0em;line-height: 1.8em;margin-bottom: 15px}
+address {font-style: normal;padding-bottom: 15px}
+
+/*******************************************************************************************************************
+*  LINKS                                                                                                           *
+*******************************************************************************************************************/
+a, a:link, a:focus {color: #7d1710;outline: 0}
+a:visited {color: #7d1710}
+a:hover {color: #000;text-decoration: none}
+a.more {font-weight: bold;color: #7d1710;padding-right: 12px;background: url('../img/arrow-red.gif') no-repeat 100% 50%}
+.w220 a.more {display: block;margin-bottom: 20px;float: left}
+/*******************************************************************************************************************
+*  TITLES                                                                                                          *
+*******************************************************************************************************************/
+h1, h2, h3, h4, h5 {margin: 0 0 10px 0}
+h1 {font-size: 3.0em;color: #fff;line-height: 1.0em;margin-bottom: 15px;font-weight: bold;}
+h2 {font-size: 1.8em;color: #3b3b3b;margin-bottom: 20px;font-weight: normal;padding-bottom: 10px;border-bottom: 1px dotted #c4c4c4}
+#intro h2 {font-size: 3.0em;margin-bottom: 5px;}
+h3 {font-size: 1.2em;color: #3b3b3b;margin-bottom: 20px;text-transform: uppercase}
+h4 {font-size: 1.2em;color: #3b3b3b;}
+h5 {font-size: 1.1em}
+
+
+/*******************************************************************************************************************
+*  HEADER                                                                                                          *
+*******************************************************************************************************************/
+#header {background: url('../img/bg-header.png') repeat-x bottom;position: absolute;top: 0;left: 0;height: 73px;width: 100%;z-index: 90}
+#header #logo {background: url('../img/logo.png') no-repeat;display: block;height: 22px;left: 0;z-index: 10;text-indent: -9999px;position: absolute;top: 25px;width: 68px;color: #000}                
+/* navigation */
+#header #navigation {position: absolute;right: 0;top: 0px;height: 72px;}
+#header #navigation li {display: inline-block;margin-left: 1px}
+#header #navigation li a {display: inline-block;height: 72px;line-height: 72px;font-size: 11px;padding: 0 15px;text-decoration: none;color: #e28571}
+#header #navigation li.active a,
+#header #navigation li a:hover {color: #fff;background: url('../img/bg-nav-hover-active.png') repeat-x}
+
+/*******************************************************************************************************************
+*  INTRO                                                                                                           *
+*******************************************************************************************************************/
+#intro {background: url('../img/bg-intro.png') repeat-x bottom;margin-bottom: 30px;position: relative;z-index: 100}
+#intro .background {background: url('../img/bg-intro-middle.png') repeat-x center;height: 263px;}
+#intro .content {width: 500px;padding: 30px 0 0}
+#intro p {color: #eac3ae;font-size: 11px}
+#intro .image {width: 369px;height: 315px;position: absolute;top: -5px;right: 0;background: url('../img/bg-image.png') no-repeat}
+#intro .image .position {position: relative;top: 37px;left: 35px;width: 300px;height: 240px;text-align: center}
+
+
+/*******************************************************************************************************************
+*  CONTENT                                                                                                         *
+*******************************************************************************************************************/
+#container {margin-bottom: 40px}
+
+#container #breadcrumb a.home {padding: 0;margin: 0;background: none;text-decoration: none}
+#container #breadcrumb a {padding-left: 12px;color: #818181;margin-left: 5px;background: url('../img/arrow-gray.gif') no-repeat 0 50%}
+
+#container ul {padding: 5px 10px 25px 40px;list-style: disc}
+#container ul li {padding: 3px 0 3px 5px;}
+
+#container .gallery img {margin: 0 20px 20px 0;float: left}
+
+#container table {width: 100%;border-collapse: collapse;border: 1px solid #efefef}
+#container table th {text-align: left;padding: 10px;border: 1px solid #81190f;border-bottom: 3px solid #4c1917;background: #81190f;color: #fff}
+#container table td {padding: 7px 10px;border: 1px solid #efefef}
+#container table .dark td {background: #f7f7f7}
+
+#container form {margin-bottom: 20px}
+#container form fieldset {background: #f7f7f7;padding: 10px 15px;border: 1px solid #efefef}
+#container form table {width: 100%;border: 0}
+#container form th {padding: 10px 0 10px 0;border: 0;background: none;color: #000;text-align: left;width: 30%;vertical-align: top}
+#container form td {padding: 5px 20px 5px 0;width: 70%;border: 0}
+#container form .text {padding: 5px;width: 199px;}
+#container form .textarea {padding: 5px;width:338px;height:158px;}
+#container form .checkbox {width: 20px;height: 20px;float: left;position: relative;top: -4px;margin-right: 2px}
+#container form .radio {width: 20px;height: 20px;float: left;position: relative;top: -5px;margin-right: 2px}
+#container form tfoot td {padding-top: 10px}
+#container form .submit {cursor: pointer;padding: 5px 10px;font-weight: bold;text-transform: uppercase;font-family: Arial;font-size: 1.0em;}
+    
+/*******************************************************************************************************************
+*  FOOTER                                                                                                          *
+*******************************************************************************************************************/
+#footer {background: #dedede url('../img/bg-footer.png') repeat-x center;height: 86px;}
+#footer p {color: #686868;font-size: 11px;padding-top: 35px}
+#footer p a {color: #686868;}
+
+/*******************************************************************************************************************
+*  OTHER STYLES                                                                                                    *
+*******************************************************************************************************************/
+.high {font-weight: bold;color: #2d7bac}
+.inner {padding: 15px 20px}
+.middle {margin: 0 auto;position: relative;}
+.w900 {width: 900px}
+.w560 {width: 560px}
+.w220 {width: 250px}
+a.thumb img {border: 1px solid #e4e4e4}
+a.button {display: block;float: left;height: 36px;background: url('../img/butt-left.png') no-repeat}
+a.button .text {color: #5e1812;font-weight: bold;display: block;float: left;position: relative;left: 15px;padding: 0 20px 0 5px;height: 36px;line-height: 36px;background: url('../img/butt-right.png') no-repeat 100% 0}
+a.button:hover .text:hover {color: #000}
+.inner_copyright{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+
