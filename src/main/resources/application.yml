@@ -1,0 +1,27 @@
+server:
+  port: 8094
+  servlet:
+    jsp:
+      init-parameters:
+        development: true # 开启JSP开发模式
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/java_web_teaching?allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: 
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+# 日志
+logging:
+  level:
+    root: info
+    com.study.jsp: debug # 指定包日志
