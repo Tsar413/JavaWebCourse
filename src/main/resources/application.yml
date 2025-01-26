@@ -15,6 +15,12 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/java_web_teaching?allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: 
     password: 
+    type: org.apache.commons.dbcp2.BasicDataSource
+    dbcp2: #后用dbcp2配置
+      min-idle: 5 #最小空闲连接:连接池中容许保持空闲状态的最小连接数量
+      initial-size: 5 #初始化连接数量
+      max-total: 5
+      max-wait-millis: 200
   jpa:
     hibernate:
       ddl-auto: update

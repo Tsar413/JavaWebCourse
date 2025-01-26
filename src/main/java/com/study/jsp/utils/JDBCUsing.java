@@ -1,5 +1,7 @@
 package com.study.jsp.utils;
 
+import com.study.jsp.dto.UserDetail1;
+import com.study.jsp.dto.UserDetail2;
 import com.study.jsp.entity.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -9,8 +11,8 @@ import java.util.List;
 public class JDBCUsing {
     private String driver = "com.mysql.cj.jdbc.Driver";//mysql驱动
     private String url ="jdbc:mysql://127.0.0.1:3306/java_web_teaching?allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=GMT%2B8";//连接地址
-    private String user ="username";//用户
-    private String password ="passwords";//密码
+    private String user ="root";//用户
+    private String password ="123456";//密码
 
     private DriverManagerDataSource dataSource;
 
@@ -35,5 +37,36 @@ public class JDBCUsing {
 
     public List<String> queryTest3(){
         return new JDBCLearning(jdbcTemplate).queryTest3();
+    }
+
+    public List<UserDetail1> queryTest4(){
+        return new JDBCLearning(jdbcTemplate).queryTest4();
+    }
+
+    public List<UserDetail2> queryTest5(){
+        return new JDBCLearning(jdbcTemplate).queryTest5();
+    }
+
+    public Integer queryTest6(){
+        return new JDBCLearning(jdbcTemplate).queryTest6();
+    }
+
+    public String queryTest7(){
+        return new JDBCLearning(jdbcTemplate).queryTest7();
+    }
+
+    public List<String> queryTest8(Integer times){
+        return new JDBCLearning(jdbcTemplate).queryTest8(times);
+    }
+
+    public void execute(){
+//        new JDBCLearning(jdbcTemplate).executeInsert1();
+//        new JDBCLearning(jdbcTemplate).executeUpdate1();
+//        new JDBCLearning(jdbcTemplate).executeDelete1();
+//        new JDBCLearning(jdbcTemplate).executeInsert2();
+//        new JDBCLearning(jdbcTemplate).executeUpdate2();
+//        new JDBCLearning(jdbcTemplate).executeInsert3("d", "123");
+        new JDBCLearning(jdbcTemplate).executeUpdate3("d", "123456");
+
     }
 }
