@@ -30,6 +30,11 @@ public class PageController {
         return "serverInteraction/loginFail";
     }
 
+    @RequestMapping("/showPersonInformation")
+    public String showPersonInformation(){
+        return "serverInteraction/showPersonInformation";
+    }
+
     @RequestMapping("/registrationSuccess")
     public String registrationSuccess(){
         return "serverInteraction/registrationSuccess";

@@ -13,4 +13,8 @@ public interface UserDao {
     String checkLogin(String username, String password);
 
     List<User> getPersonInformation(String username);
+
+    Integer getMaxNumber();
+
+    List<User> getLimitPersonInformation(Integer startNumber);
 }

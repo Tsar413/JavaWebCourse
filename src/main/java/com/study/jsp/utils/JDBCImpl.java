@@ -41,4 +41,12 @@ public class JDBCImpl {
     public List<User> getPersonInformation(String username){
         return new UserDaoImpl(jdbcTemplate).getPersonInformation(username);
     }
+
+    public Integer getMaxNumber(){
+        return new UserDaoImpl(jdbcTemplate).getMaxNumber();
+    }
+
+    public List<User> getLimitPersonInformation(Integer startNumber){
+        return new UserDaoImpl(jdbcTemplate).getLimitPersonInformation(startNumber);
+    }
 }

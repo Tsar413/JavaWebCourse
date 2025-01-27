@@ -77,4 +77,34 @@ public class UserDaoImpl implements UserDao {
         });
         return list;
     }
+
+    @Override
+    public Integer getMaxNumber(){
+        String sql1 = "select max(id) from users";
+        Integer userId = jdbcTemplate.queryForObject(sql1, Integer.class);
+        if(userId == null){
+            userId = 0;
+        }
+        return userId;
+    }
+
+    @Override
+    public List<User> getLimitPersonInformation(Integer startNumber){
+        String sql = "select * from users limit ?,5";
+        List<User> list = jdbcTemplate.query(sql,new Object[]{startNumber}, new RowMapper<User>() {
+            @Override
+            public User mapRow(ResultSet resultSet, int i) throws SQLException {
+                User user = new User();
+                user.setUsername(resultSet.getString("username"));
+                user.setEmail(resultSet.getString("email"));
+                user.setIntro(resultSet.getString("intro"));
+                user.setLan(resultSet.getString("lan"));
+                user.setTimes(Integer.valueOf(resultSet.getString("times")));
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                user.setTime(LocalDateTime.parse(resultSet.getString("last_time"), formatter));
+                return user;
+            }
+        });
+        return list;
+    }
 }
