@@ -7,6 +7,8 @@
     <title>Shop Cart</title>
 </head>
 <body>
+<center>
+<a href="books">书本区</a>  <a href="foods">食品区</a>
     <h1>Hello Shop Cart</h1>
     <table border = "1">
     <tr>
@@ -22,7 +24,9 @@
         ShopCartController shopCart = new ShopCartController();
         List<ShopCart> list = shopCart.getAllProducts();
         // out.print(list);
+        double sum = 0.0;
         for(ShopCart cart : list){
+        sum += cart.getGoodPrice() * cart.getGoodCount();
     %>
         <tr>
         <form method="post" action="deals">
@@ -40,5 +44,7 @@
         }
     %>
     </table>
+    <h3>商品总和为: <%=sum%></h3>
+</center>
 </body>
 </html>

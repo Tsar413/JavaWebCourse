@@ -8,6 +8,7 @@
 </head>
 <body>
 <center>
+<a href="books">书本区</a>  <a href="shopCart">购物车</a>
 <%
     FoodController foodController = new FoodController();
     List<Food> list = foodController.getAllFoods();
