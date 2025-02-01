@@ -1,0 +1,5 @@
+INSERT INTO `t_car` VALUES (2, 1, '9787020090532', '老人与海', 12);
+INSERT INTO `t_car` VALUES (1, 12, '9787020048045', '平凡的世界', 65);
+INSERT INTO `t_car` VALUES (3, 1, '077330012416', '蓝罐曲奇', 21.15);
+INSERT INTO `t_car` VALUES (4, 2, '6974779611764', '红豆沙面包', 12.1);
+INSERT INTO `t_car` VALUES (5, 1, '9787506355957', '活着', 15);
